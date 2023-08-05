@@ -1,0 +1,15 @@
+--Create a bookstore database
+
+CREATE TABLE Bookstore (id INTEGER PRIMARY KEY, Title TEXT, Author TEXT, Genre TEXT, Price INTEGER, Condition TEXT);
+
+INSERT INTO Bookstore VALUES (1, "Verity", "Colleen Hover", "Fiction", "10.95", "Used");
+INSERT INTO Bookstore VALUES (2, "The Fault In Our Stars", "John Green", "Fiction", "8.99", "Used");
+INSERT INTO Bookstore VALUES (3, "Behind the Net", "Stephanie Archer", "Fiction", "12.25", "New");
+INSERT INTO Bookstore VALUES (4, "Part of Your World", "Abby Jimenez", "Fiction", "14.99", "New");
+
+--Display the database ordered by price
+
+SELECT * FROM Bookstore
+ORDER BY Price asc;
+
+--What is the average price of books in Used condition?
