@@ -1,0 +1,29 @@
+--Create a bookstore database
+
+CREATE TABLE Bookstore (id INTEGER PRIMARY KEY, Title TEXT, Author TEXT, Genre TEXT, Price INTEGER, Condition TEXT);
+
+INSERT INTO Bookstore VALUES (1, "Verity", "Colleen Hoover", "Fiction", "10.95", "Used");
+INSERT INTO Bookstore VALUES (2, "The Fault In Our Stars", "John Green", "Fiction", "8.99", "Used");
+INSERT INTO Bookstore VALUES (3, "Behind the Net", "Stephanie Archer", "Fiction", "12.25", "New");
+INSERT INTO Bookstore VALUES (4, "Part of Your World", "Abby Jimenez", "Fiction", "14.99", "New");
+INSERT INTO Bookstore VALUES (5, "A Court of Thorns and Roses","Sarah J. Maas", "Fantacy", "12.50", "New");
+INSERT INTO Bookstore VALUES (6, "The Love Hypothesis","Ali Hazelwood", "Fiction", "12.99", "Used");
+INSERT INTO Bookstore VALUES (7, "Firekeeper's Daughter","Angeline Boulley", "Thriller", "13.75", "Used");
+INSERT INTO Bookstore VALUES (8, "Lessons in Chemistry","Bonnie Garmus", "Fiction", "11.50", "Used");
+INSERT INTO Bookstore VALUES (9, "She's Gone","David Bell", "Thriller", "10.00", "New");
+INSERT INTO Bookstore VALUES (10, "Happy Place","Emily Henry", "Fiction", "13.50", "Used");
+INSERT INTO Bookstore VALUES (11, "A Good Girl's Guide to Murder","Holly Jackson", "Thriller", "8.00", "Used");
+INSERT INTO Bookstore VALUES (12, "Shadow and Bone","Leigh Bardugo", "Fantacy", "11", "Used")
+;
+
+
+--Display the database ordered by price cheapest to most expensive
+
+SELECT * 
+FROM Bookstore
+ORDER BY Price asc;
+
+--What is the average price of the books in Used condition?
+SELECT AVG(Price)
+FROM Bookstore
+WHERE Condition = 'Used';
